@@ -4,7 +4,6 @@
     box-sizing: border-box;
     list-style: none;
 }
-
 body{
     background-color: #151515;
     color: #fff;
@@ -12,15 +11,15 @@ body{
 }
 
 header{
-    background-color: #151515;
+    background-color: #151515; 
     position: sticky;
     top: 0;
     z-index: 2;
-}
+} 
 
 .container{
     max-width: 900px;
-    /* background-color: rgb(145, 161, 175); */
+    /* background-color: #6c6c6c; */
     margin: auto;
 }
 .header-content{
@@ -29,110 +28,103 @@ header{
     align-items: center;
     padding: 30px 0;
 }
-
-.header-content ul{
+.header-content ul {
     display: flex;
     gap: 10px;
 }
 
 /* Sección welcome */
 
+
+
 .welcome-content{
     display: flex;
     padding: 50px 0;
 }
-
 .col-1{
     display: flex;
     flex-direction: column;
     gap: 25px;
-   /*  background-color: rgb(71, 34, 105); */
+    /* background-color: blueviolet; */
     flex: 2;
 }
-
 .col-1 h3{font-size: 3rem;}
 .col-1 h3 span{
     text-decoration: underline;
-    text-decoration-color: aquamarine;  
+    text-decoration-color: aquamarine;
 }
-
 .col-1 a{
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration-color: aquamarine;
 }
-
 .col-2{
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: relative;
-    /* background-color: rgb(145, 28, 145); */
+    /* background-color: rgb(73, 19, 123); */
     flex: 1;
+    overflow: hidden;
 }
-
 .img-pizza, .img-hoja, .img-tomato{
     position: absolute;
 }
-
 .img-pizza{
     filter: blur(1.5px);
 }
 
 .img-tomato{
-    width: 70%;
-    right: -30px;
-    top: 0;
+  width: 80%;  
+  right: -30px;
+  top: 0;
 }
-
 .img-hoja{
     width: 40%;
     left: 0;
-    bottom: 10px;
+    bottom: 40px;
     transform: rotate(130deg);
 }
 
-/* Sección Productos */
+
+/* Sección productos */
 
 #productos{
     background-color: lightgray;
 }
-
 #productos > .container{
     background-color: rgb(156, 156, 156);
 }
-
 .productos-content{
     display: flex;
     gap: 10px;
     padding: 20px;
 }
-
 .product-card{
     flex: 1;
     position: relative;
     border-radius: 30px;
     overflow: hidden;
 }
-
 /* .productos-content div:nth-child(1){
-    background-color: rgb(40, 104, 156);
+    background-color: rgb(31, 167, 235);
 } */
 /* .productos-content div:nth-child(2){
-    background-color: rgb(21, 187, 29);
+    background-color: rgb(152, 234, 20);
 } */
-
 .productos-content div:nth-child(3){
     background-color: tomato;
 }
+
 
 .product-card:hover .card-hover{
     opacity: 1;
 }
 
 /* Card hover */
+
 
 .card-hover{
     display: flex;
@@ -143,11 +135,12 @@ header{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.51)!important;
-    top: 0;
+    top:0;
     left: 0;
     opacity: 0;
     transition-duration: .5s;
 }
+
 
 /* Card hover header */
 
@@ -163,9 +156,8 @@ header{
     text-decoration: none;
     font-weight: bold;
 }
-
 .btn-guardar{
-    background-color: rgb(202, 42, 14);
+    background-color: rgb(244, 48, 48);
     color: white;
     padding: 15px;
     border-radius: 25px;
@@ -176,7 +168,10 @@ header{
 
 .product-card img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 
 /* Card hover footer */
 
@@ -192,4 +187,43 @@ header{
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+
+/* Primer breakpoint tablet*/
+@media screen and (max-width: 800px){
+    body{
+        /* background-color: tomato; */
+    }
+    .welcome-content{
+        flex-direction: column-reverse;
+    }
+    .col-2 {
+        /* background-color: rgb(73, 19, 123) !important; */
+        flex: none;
+        height: 300px;
+    }
+    .img-pizza, .img-hoja, .img-tomato {
+        width: 230px;
+    }
+    .productos-content {
+        flex-wrap: wrap;
+    }
+    .product-card {
+        flex: none;
+        width: 49%;
+    }
+    
+}
+
+/* Segundo breakpoint mobile */
+@media screen and (max-width: 576px){
+    body{
+        /* background-color: blueviolet; */
+    }
+    .product-card {
+        flex: none;
+        width: 80%;
+        margin: auto;
+    }
 }
