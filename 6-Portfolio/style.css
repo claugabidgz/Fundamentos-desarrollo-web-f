@@ -157,7 +157,7 @@ header{
     font-weight: bold;
 }
 .btn-guardar{
-    background-color: rgb(244, 48, 48);
+    background-color: rgb(209, 32, 32);
     color: white;
     padding: 15px;
     border-radius: 25px;
@@ -223,7 +223,7 @@ header{
     }
     .product-card {
         flex: none;
-        width: 80%;
+        width: 90%;
         margin: auto;
     }
 }
